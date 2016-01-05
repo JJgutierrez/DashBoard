@@ -1,0 +1,40 @@
+﻿<Classes:Needle
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:Classes="clr-namespace:Coding4Fun.Obd.InstrumentCluster.Classes" mc:Ignorable="d"
+	x:Name="UserControl"
+	x:Class="Coding4Fun.Obd.InstrumentCluster.Controls.SkinMetro.LargeNeedle">
+
+    <Classes:Needle.Resources>
+        <Storyboard x:Key="uxSB_GameLoop" Duration="00:00:00.03">
+            <DoubleAnimation Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="(UIElement.Opacity)" To="1" />
+        </Storyboard>
+    </Classes:Needle.Resources>
+    
+	<Canvas x:Name="LayoutRoot">
+	<Grid x:Name="uxNeedle"
+		Width="410"
+		Height="410"
+		Canvas.Left="0" Margin="-205,-205,0,0" RenderTransformOrigin="0.5,0.5">
+		<Path
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Height="410"
+			Width="205"
+			Stretch="Fill"
+			Data="M 4.76837158203125e-7,205.17016649246216 C-0.005736827850341797,318.48974657058716 91.85070848464966,410.3554081916809 205.17016649246216,410.36108446121216 205.17016649246216,410.36108446121216 205.19091844558716,4.76837158203125e-7 205.19091844558716,4.76837158203125e-7 91.87136888504028,-0.005736827850341797 0.005707263946533203,91.85064744949341 4.76837158203125e-7,205.17016649246216 z"
+			Fill="{DynamicResource AccentColor}" />
+		<Path
+			Margin="205,0,0,0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Height="410"
+			Width="205"
+			Stretch="Fill"
+			Data="M 410.36108446121216,205.19091844558716 C410.36682176589966,91.87133836746216 318.51037645339966,0.005707263946533203 205.19091844558716,4.76837158203125e-7 205.19091844558716,4.76837158203125e-7 205.18957567214966,25.074524402618408 205.18957567214966,25.074524402618408 304.66064500808716,25.079529285430908 385.29162645339966,105.71850633621216 385.2865605354309,205.18957567214966 385.2815556526184,304.66076707839966 304.6425175666809,385.29162645339966 205.1714482307434,385.2865605354309 205.1714482307434,385.2865605354309 205.17016649246216,410.36108446121216 205.17016649246216,410.36108446121216 318.4896855354309,410.3667607307434 410.35534715652466,318.51049852371216 410.36108446121216,205.19091844558716 z"
+			Fill="#333333" />
+	</Grid>
+		</Canvas>
+</Classes:Needle>

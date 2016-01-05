@@ -1,0 +1,5 @@
+C:\Users\Juan\Documents\class\dashboard\Coding4Fun.Obd\Coding4Fun.Obd.ObdManager\bin\Debug\Coding4Fun.Obd.ObdManager.dll
+C:\Users\Juan\Documents\class\dashboard\Coding4Fun.Obd\Coding4Fun.Obd.ObdManager\bin\Debug\Coding4Fun.Obd.ObdManager.pdb
+C:\Users\Juan\Documents\class\dashboard\Coding4Fun.Obd\Coding4Fun.Obd.ObdManager\obj\Debug\Coding4Fun.Obd.ObdManager.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Documents\class\dashboard\Coding4Fun.Obd\Coding4Fun.Obd.ObdManager\obj\Debug\Coding4Fun.Obd.ObdManager.dll
+C:\Users\Juan\Documents\class\dashboard\Coding4Fun.Obd\Coding4Fun.Obd.ObdManager\obj\Debug\Coding4Fun.Obd.ObdManager.pdb

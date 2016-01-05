@@ -1,0 +1,84 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Coding4Fun.Obd.InstrumentCluster.AccentColorsSelection"
+	x:Name="UserControl">
+
+<Border x:Name="LayoutRoot" Background="Black">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="OpenCloseStates">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="0:0:0.3">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <CubicEase EasingMode="EaseInOut"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                    </VisualTransition>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="Open"/>
+                <VisualState x:Name="Closed">
+                    <Storyboard>
+                        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="LayoutRoot">
+                            <EasingColorKeyFrame KeyTime="0" Value="#00000000"/>
+                        </ColorAnimationUsingKeyFrames>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="uxInterface">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="uxInterface">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LayoutRoot">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="LayoutRoot">
+                            <DiscreteBooleanKeyFrame KeyTime="0" Value="False"/>
+                        </BooleanAnimationUsingKeyFrames>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="uxInterface">
+                        	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+		<Grid x:Name="uxInterface" RenderTransformOrigin="0.5,0.5">
+			<Grid.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="1" ScaleY="1"/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Grid.RenderTransform>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="50"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="110"/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<StackPanel Grid.Row="1" Grid.Column="1">
+				<StackPanel Orientation="Horizontal" Margin="-64,0,0,0">
+					<Button x:Name="uxClose" Style="{DynamicResource ButtonStyle_Back}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,24,0" RenderTransformOrigin="0.5,0.5"/>
+					<TextBlock TextWrapping="Wrap" FontFamily="Segoe UI Light" FontSize="73.333" Foreground="White" Margin="0,-20,0,87" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="Accent Color"/></TextBlock>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Margin="{DynamicResource ColorTileRowMargin}">
+					<RadioButton x:Name="uxThemeColor_Green" Content="green" Foreground="{DynamicResource ThemeColor_Green}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Red" Content="red" Foreground="{DynamicResource ThemeColor_Red}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Blue" Content="blue" Foreground="{DynamicResource ThemeColor_Blue}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}" IsChecked="True"/>
+					<RadioButton x:Name="uxThemeColor_Yellow" Content="yellow" Foreground="{DynamicResource ThemeColor_Yellow}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Pink" Content="pink" Foreground="{DynamicResource ThemeColor_Pink}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Brown" Content="brown" Foreground="{DynamicResource ThemeColor_brown}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Lime" Content="lime" Foreground="{DynamicResource ThemeColor_Lime}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Teal" Content="teal" Foreground="{DynamicResource ThemeColor_Teal}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Purple" Content="purple" Foreground="{DynamicResource ThemeColor_Purple}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+					<RadioButton x:Name="uxThemeColor_Magenta" Content="magenta" Foreground="{DynamicResource ThemeColor_Magenta}" Style="{DynamicResource RadioButtonStyle_ColorSelectionTile}"/>
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+
+	</Border>
+</UserControl>
